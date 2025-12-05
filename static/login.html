@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to MyChat</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+<script>
+    if (localStorage.getItem("token")) {
+        window.location.href = "/";
+    }
+</script>
+<body>
+    <main>
+        <section>
+            <form class="sign-up__form" id="loginForm">
+                <input type="email" class="email-input" id="emailInput" placeholder="Enter your email..." required>
+                <input type="password" class="email-password" id="passwordInput" placeholder="Enter your password..." required>
+                <button type="submit" class="log-btn" id="submitBtn">Log in</button>
+            </form>
+            <a href="/sign-up/" class="have-not-accout">You have not account yet ?</a>
+        </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/authFront.js"></script>
+
+</body>
+</html>

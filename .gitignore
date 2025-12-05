@@ -1,0 +1,25 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Database
+db.sqlite3
+
+# Media
+media/
+
+# Django static files (collected)
+staticfiles/
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+
+# Other
+*.log
+node_modules/
