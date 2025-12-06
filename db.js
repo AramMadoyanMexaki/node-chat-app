@@ -8,7 +8,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 // Հակառակ դեպքում, օգտագործել .env-ի առանձին փոփոխականները (ինչպես նախկինում)
 const connectionConfig = isProduction ? {
     connectionString: process.env.DATABASE_URL,
-    // ԿԱՐԵՎՈՐ՝ Անհրաժեշտ է SSL-ը Render-ի ապահով կապի համար
     ssl: {
         rejectUnauthorized: false
     }
