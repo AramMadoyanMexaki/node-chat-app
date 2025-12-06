@@ -4,6 +4,8 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 const pool = require('./db');
 
+const PORT = process.env.PORT || 3000;
+
 const auth = require("./auth");
 auth(io);
 
@@ -53,6 +55,6 @@ io.on("connection", async (socket) => {
     });
 });
 
-http.listen(3000, () => {
-    console.log("Server is running on port 3000");
+http.listen(PORT, () => {
+    console.log("Server is running on port,", PORT);
 });

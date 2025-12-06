@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Chat App</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/media.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family:wght@300;400;500&display=swap">
 </head>
@@ -30,8 +31,10 @@
         </section>
         <form id="sendForm" class="form">
             <div class="name" id="currentUser"></div>
-            <input type="text" placeholder="Write your message..." id="sendInput" class="send__input" required>
-            <button type="submit" class="send__btn" id="sendBtn">Send</button>
+            <div class="functionality__block">
+                <input type="text" placeholder="Write your message..." id="sendInput" class="send__input" required>
+                <button type="submit" class="send__btn" id="sendBtn">Send</button>
+            </div>
         </form>
     </main>
     <script src="/socket.io/socket.io.js"></script>

@@ -1,0 +1,8 @@
+@media (max-width: 508px) {
+   .form {
+       display: flex;
+       flex-direction: column;
+       justify-content: start;
+       align-items: center;
+   }
+}
