@@ -1,7 +1,16 @@
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
-const io = require("socket.io")(http);
+// render host name for my project
+const RENDER_EXTERNAL_URL = "https://node-chat-app-ymtb.onrender.com";
+
+const io = require("socket.io")(http, {
+    cors: {
+        origin: RENDER_EXTERNAL_URL, 
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+});
 const pool = require('./db');
 
 const PORT = process.env.PORT || 3000;
