@@ -23,3 +23,8 @@ staticfiles/
 # Other
 *.log
 node_modules/
+
+# sql
+
+chatdb_backup.sql
+tgres -d chatdb > chatdb_backup.sql
